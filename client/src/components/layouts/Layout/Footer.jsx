@@ -30,7 +30,6 @@ function Footer() {
       className={classes.root}
     >
             <BottomNavigationAction label="home" icon={<HomeIcon />} component={Link} to="/"/>
-
       <BottomNavigationAction label="cats" icon={<PetsIcon />} component={Link} to="/cats"/>
         <BottomNavigationAction label="colonies" component={Link} to="/colonies" icon={<ExploreIcon />} />
     </BottomNavigation>

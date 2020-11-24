@@ -1429,3 +1429,1109 @@ Processing by CatsController#index as HTML
 Completed 200 OK in 47ms (Views: 19.6ms | ActiveRecord: 27.0ms | Allocations: 6264)
 
 
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:08:45 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (3.9ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 3.9ms | Allocations: 1468)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:12:30 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.7ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.7ms | Allocations: 1456)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:12:40 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (25.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (1.0ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (18.1ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 119ms (Views: 72.7ms | ActiveRecord: 45.3ms | Allocations: 6263)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:12:41 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.8ms | Allocations: 1456)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:12:41 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (20.1ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (2.9ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 73ms (Views: 48.2ms | ActiveRecord: 24.3ms | Allocations: 6263)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:12:44 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (22.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 43ms (Views: 18.7ms | ActiveRecord: 24.3ms | Allocations: 6264)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:12:45 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.5ms | Allocations: 1456)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:12:47 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (22.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 44ms (Views: 20.7ms | ActiveRecord: 23.4ms | Allocations: 6263)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:12:48 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 1457)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:12:48 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (24.9ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (2.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 48ms (Views: 19.6ms | ActiveRecord: 28.6ms | Allocations: 6264)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:12:50 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (1.7ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 3.2ms | Allocations: 6263)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:12:50 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1457)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:12:51 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (21.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 55ms (Views: 30.8ms | ActiveRecord: 23.8ms | Allocations: 6263)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:12:53 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.7ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (24.0ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 49ms (Views: 21.9ms | ActiveRecord: 26.3ms | Allocations: 6264)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:12:54 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1457)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:12:55 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (23.0ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 40ms (Views: 15.0ms | ActiveRecord: 24.7ms | Allocations: 6263)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:12:56 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1456)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:12:56 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (23.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 50ms (Views: 24.0ms | ActiveRecord: 25.6ms | Allocations: 6264)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:12:57 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.7ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 2.6ms | Allocations: 6263)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:12:57 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 1456)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:12:58 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.7ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 2.4ms | Allocations: 6264)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:12:59 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 1456)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:12:59 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (21.7ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 47ms (Views: 23.2ms | ActiveRecord: 23.7ms | Allocations: 6264)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:13:00 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 2.6ms | Allocations: 6264)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:13:01 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1456)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:13:04 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 1.9ms | Allocations: 6263)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:13:04 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.4ms | Allocations: 1457)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:18:41 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (22.7ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 8.5ms | ActiveRecord: 22.7ms | Allocations: 1530)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:18:50 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 1456)
+
+
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:18:51 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 581)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/colonies_controller.rb:22:in `destroy'
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:18:52 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 598)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/colonies_controller.rb:22:in `destroy'
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:18:52 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 588)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/colonies_controller.rb:22:in `destroy'
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:18:52 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 588)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/colonies_controller.rb:22:in `destroy'
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:19:26 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 1487)
+
+
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:19:27 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 589)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/colonies_controller.rb:22:in `destroy'
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:19:27 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 588)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/colonies_controller.rb:22:in `destroy'
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:19:28 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 588)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/colonies_controller.rb:22:in `destroy'
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:19:28 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 588)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/colonies_controller.rb:22:in `destroy'
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:19:35 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 588)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/colonies_controller.rb:22:in `destroy'
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:19:38 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (29.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (1.0ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (3.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 100ms (Views: 63.8ms | ActiveRecord: 35.4ms | Allocations: 6328)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:19:39 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1456)
+
+
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:19:41 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 588)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/colonies_controller.rb:22:in `destroy'
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:19:43 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 588)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/colonies_controller.rb:22:in `destroy'
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:19:43 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 588)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/colonies_controller.rb:22:in `destroy'
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:19:43 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 588)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/colonies_controller.rb:22:in `destroy'
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:19:44 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.7ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (22.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 46ms (Views: 20.6ms | ActiveRecord: 24.8ms | Allocations: 6262)
+
+
+Started DELETE "/cats/5" for 127.0.0.1 at 2020-11-23 21:19:46 -0500
+Processing by CatsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:37:in `set_cat'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:32:in `destroy'
+  [1m[36mCat::HABTM_Colonies Destroy (26.5ms)[0m  [1m[31mDELETE FROM "cats_colonies" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 5]]
+  ↳ app/controllers/cats_controller.rb:32:in `destroy'
+  [1m[36mCat Destroy (1.0ms)[0m  [1m[31mDELETE FROM "cats" WHERE "cats"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/cats_controller.rb:32:in `destroy'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:32:in `destroy'
+Completed 204 No Content in 41ms (ActiveRecord: 30.7ms | Allocations: 3194)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:21:43 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (34.0ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (28.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 248ms (Views: 59.2ms | ActiveRecord: 177.9ms | Allocations: 14823)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:21:49 -0500
+Processing by ColoniesController#index as HTML
+Completed 404 Not Found in 0ms (ActiveRecord: 0.0ms | Allocations: 147)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Colony without an ID):
+  
+app/controllers/colonies_controller.rb:29:in `set_colony'
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:22:04 -0500
+Processing by ColoniesController#index as HTML
+Completed 404 Not Found in 0ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Colony without an ID):
+  
+app/controllers/colonies_controller.rb:29:in `set_colony'
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:22:12 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (27.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 93ms (Views: 21.5ms | ActiveRecord: 63.3ms | Allocations: 5838)
+
+
+Started DELETE "/colonies/1" for 127.0.0.1 at 2020-11-23 21:22:16 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mColony Load (1.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" WHERE "colonies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/colonies_controller.rb:29:in `set_colony'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+  [1m[36mColony::HABTM_Cats Destroy (1.2ms)[0m  [1m[31mDELETE FROM "cats_colonies" WHERE "cats_colonies"."colony_id" = $1[0m  [["colony_id", 1]]
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+  [1m[36mColony Destroy (3.2ms)[0m  [1m[31mDELETE FROM "colonies" WHERE "colonies"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+Completed 204 No Content in 65ms (ActiveRecord: 35.4ms | Allocations: 6224)
+
+
+Started DELETE "/colonies/2" for 127.0.0.1 at 2020-11-23 21:22:18 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mColony Load (25.9ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" WHERE "colonies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/colonies_controller.rb:29:in `set_colony'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+  [1m[36mColony::HABTM_Cats Destroy (0.7ms)[0m  [1m[31mDELETE FROM "cats_colonies" WHERE "cats_colonies"."colony_id" = $1[0m  [["colony_id", 2]]
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+  [1m[36mColony Destroy (0.6ms)[0m  [1m[31mDELETE FROM "colonies" WHERE "colonies"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+Completed 204 No Content in 38ms (ActiveRecord: 28.5ms | Allocations: 3180)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:22:27 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (23.7ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 59ms (Views: 28.2ms | ActiveRecord: 29.9ms | Allocations: 8247)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:22:29 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (1.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.5ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:23:19 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (2.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 2.3ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:23:26 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:23:39 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (1.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 1.6ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:23:42 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:23:56 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1252)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:24:01 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (2.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (1.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 14.0ms | ActiveRecord: 4.9ms | Allocations: 4664)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:24:02 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:24:05 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (1.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.4ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:24:31 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.4ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:24:31 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:26:19 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:26:44 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:26:55 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (24.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 29ms (Views: 4.8ms | ActiveRecord: 24.2ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:28:03 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (24.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 54ms (Views: 29.2ms | ActiveRecord: 24.4ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:28:03 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (23.9ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 29ms (Views: 4.9ms | ActiveRecord: 23.9ms | Allocations: 1253)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:28:03 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:28:04 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:28:04 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (1.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.5ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:28:04 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.7ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.7ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:28:05 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:28:26 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:29:01 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:29:12 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1252)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:29:20 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (24.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 38ms (Views: 12.0ms | ActiveRecord: 25.8ms | Allocations: 4665)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:29:20 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:30:01 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.6ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:31:10 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (29.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 55ms (Views: 21.8ms | ActiveRecord: 29.2ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:31:16 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (1.0ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 1.0ms | Allocations: 1252)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:31:17 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (25.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 43ms (Views: 16.0ms | ActiveRecord: 26.7ms | Allocations: 4665)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:31:25 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 1.3ms | Allocations: 4664)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:31:25 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:31:44 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (24.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 29ms (Views: 4.0ms | ActiveRecord: 24.6ms | Allocations: 1252)
+
+
+Started GET "/colonies/undefined" for 127.0.0.1 at 2020-11-23 21:32:13 -0500
+Processing by ColoniesController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mColony Load (0.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" WHERE "colonies"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/colonies_controller.rb:29:in `set_colony'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.6ms | Allocations: 625)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Colony with 'id'=undefined):
+  
+app/controllers/colonies_controller.rb:29:in `set_colony'
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:32:13 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (29.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 34ms (Views: 3.3ms | ActiveRecord: 29.8ms | Allocations: 1334)
+
+
+Started GET "/colonies/undefined" for 127.0.0.1 at 2020-11-23 21:32:14 -0500
+Processing by ColoniesController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mColony Load (0.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" WHERE "colonies"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/colonies_controller.rb:29:in `set_colony'
+Completed 404 Not Found in 6ms (ActiveRecord: 2.4ms | Allocations: 652)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Colony with 'id'=undefined):
+  
+app/controllers/colonies_controller.rb:29:in `set_colony'
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:32:17 -0500
+Started GET "/colonies/undefined" for 127.0.0.1 at 2020-11-23 21:32:17 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (3.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 3.5ms | ActiveRecord: 3.8ms | Allocations: 1251)
+
+
+Processing by ColoniesController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mColony Load (24.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" WHERE "colonies"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/colonies_controller.rb:29:in `set_colony'
+Completed 404 Not Found in 26ms (ActiveRecord: 24.2ms | Allocations: 625)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Colony with 'id'=undefined):
+  
+app/controllers/colonies_controller.rb:29:in `set_colony'
+Started GET "/colonies/undefined" for 127.0.0.1 at 2020-11-23 21:32:17 -0500
+Processing by ColoniesController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mColony Load (0.6ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" WHERE "colonies"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/colonies_controller.rb:29:in `set_colony'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms | Allocations: 1497)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Colony with 'id'=undefined):
+  
+app/controllers/colonies_controller.rb:29:in `set_colony'
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:33:14 -0500
+Started GET "/colonies/undefined" for 127.0.0.1 at 2020-11-23 21:33:14 -0500
+Processing by ColoniesController#index as HTML
+Processing by ColoniesController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mColony Load (1.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  [1m[36mColony Load (0.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" WHERE "colonies"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+  ↳ app/controllers/colonies_controller.rb:29:in `set_colony'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.5ms | Allocations: 1792)
+
+
+Completed 404 Not Found in 6ms (ActiveRecord: 0.8ms | Allocations: 1803)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Colony with 'id'=undefined):
+  
+app/controllers/colonies_controller.rb:29:in `set_colony'
+Started GET "/colonies/undefined" for 127.0.0.1 at 2020-11-23 21:33:15 -0500
+Processing by ColoniesController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" WHERE "colonies"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/colonies_controller.rb:29:in `set_colony'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.5ms | Allocations: 624)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Colony with 'id'=undefined):
+  
+app/controllers/colonies_controller.rb:29:in `set_colony'
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:33:23 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (1.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.2ms | Allocations: 1251)
+
+
+Started GET "/colonies/undefined" for 127.0.0.1 at 2020-11-23 21:33:24 -0500
+Processing by ColoniesController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mColony Load (2.0ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" WHERE "colonies"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/colonies_controller.rb:29:in `set_colony'
+Completed 404 Not Found in 4ms (ActiveRecord: 2.0ms | Allocations: 625)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Colony with 'id'=undefined):
+  
+app/controllers/colonies_controller.rb:29:in `set_colony'
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:34:11 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (35.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 39ms (Views: 3.3ms | ActiveRecord: 35.8ms | Allocations: 1251)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:34:35 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.7ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:34:39 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:34:42 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1252)
+
+
+Started GET "/cats" for 127.0.0.1 at 2020-11-23 21:34:45 -0500
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (1.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (1.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (1.1ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (24.0ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 43ms (Views: 14.9ms | ActiveRecord: 27.7ms | Allocations: 4688)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:34:46 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:34:55 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:34:57 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (3.0ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 3.0ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:35:06 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:35:08 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.3ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:35:10 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:38:26 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (27.9ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 56ms (Views: 22.7ms | ActiveRecord: 27.9ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:38:33 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (1.1ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 1.1ms | Allocations: 1252)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:39:21 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (40.0ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 46ms (Views: 5.8ms | ActiveRecord: 40.0ms | Allocations: 1252)
+
+
+Started DELETE "/colonies/5" for 127.0.0.1 at 2020-11-23 21:39:23 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mColony Load (0.7ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" WHERE "colonies"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/colonies_controller.rb:29:in `set_colony'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+  [1m[36mColony::HABTM_Cats Destroy (25.8ms)[0m  [1m[31mDELETE FROM "cats_colonies" WHERE "cats_colonies"."colony_id" = $1[0m  [["colony_id", 5]]
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+  [1m[36mColony Destroy (1.6ms)[0m  [1m[31mDELETE FROM "colonies" WHERE "colonies"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+Completed 204 No Content in 60ms (ActiveRecord: 31.3ms | Allocations: 3180)
+
+
+Started DELETE "/colonies/4" for 127.0.0.1 at 2020-11-23 21:39:26 -0500
+Processing by ColoniesController#destroy as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mColony Load (0.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" WHERE "colonies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/colonies_controller.rb:29:in `set_colony'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+  [1m[36mColony::HABTM_Cats Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cats_colonies" WHERE "cats_colonies"."colony_id" = $1[0m  [["colony_id", 4]]
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+  [1m[36mColony Destroy (0.5ms)[0m  [1m[31mDELETE FROM "colonies" WHERE "colonies"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/colonies_controller.rb:24:in `destroy'
+Completed 204 No Content in 11ms (ActiveRecord: 2.4ms | Allocations: 3180)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-23 21:39:34 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (25.2ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 31ms (Views: 4.5ms | ActiveRecord: 25.2ms | Allocations: 1037)
+
+

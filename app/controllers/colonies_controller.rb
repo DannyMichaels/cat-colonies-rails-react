@@ -1,8 +1,10 @@
 class ColoniesController < ApplicationController
-    def index
+  before_action :set_colony, only: [ :show, :update, :destroy]
+  
+  def index
       @colonies = Colony.all
       render json: @colonies
-    end
+  end
   
     def show
       @colony = Colony.find(params[:id])
