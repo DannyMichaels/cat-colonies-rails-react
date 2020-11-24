@@ -2535,3 +2535,53 @@ Processing by ColoniesController#index as HTML
 Completed 200 OK in 31ms (Views: 4.5ms | ActiveRecord: 25.2ms | Allocations: 1037)
 
 
+Started GET "/cats" for 127.0.0.1 at 2020-11-24 13:33:30 -0500
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (14.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (38.4ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.9ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 2]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+  [1m[36mColony Load (0.8ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies" INNER JOIN "cats_colonies" ON "colonies"."id" = "cats_colonies"."colony_id" WHERE "cats_colonies"."cat_id" = $1[0m  [["cat_id", 3]]
+  ↳ app/controllers/cats_controller.rb:6:in `index'
+Completed 200 OK in 376ms (Views: 180.5ms | ActiveRecord: 156.3ms | Allocations: 16093)
+
+
+Started PUT "/cats/2" for 127.0.0.1 at 2020-11-24 13:34:19 -0500
+Processing by CatsController#update as HTML
+  Parameters: {"name"=>"bfaf", "age"=>"9", "breed"=>"fafafaf", "id"=>"2", "cat"=>{"name"=>"bfaf", "breed"=>"fafafaf", "age"=>"9"}}
+  [1m[36mCat Load (3.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:37:in `set_cat'
+[31mUnpermitted parameter: :age[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:24:in `update'
+  [1m[36mCat Update (33.2ms)[0m  [1m[33mUPDATE "cats" SET "name" = $1, "breed" = $2, "updated_at" = $3 WHERE "cats"."id" = $4[0m  [["name", "bfaf"], ["breed", "fafafaf"], ["updated_at", "2020-11-24 18:34:19.294679"], ["id", 2]]
+  ↳ app/controllers/cats_controller.rb:24:in `update'
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:24:in `update'
+Completed 200 OK in 61ms (Views: 1.0ms | ActiveRecord: 44.6ms | Allocations: 3577)
+
+
+Started PUT "/cats/2" for 127.0.0.1 at 2020-11-24 13:35:17 -0500
+Processing by CatsController#update as HTML
+  Parameters: {"name"=>"Bobby", "age"=>"9", "breed"=>"www", "id"=>"2", "cat"=>{"name"=>"Bobby", "breed"=>"www", "age"=>"9"}}
+  [1m[36mCat Load (25.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:37:in `set_cat'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:24:in `update'
+  [1m[36mCat Update (24.9ms)[0m  [1m[33mUPDATE "cats" SET "name" = $1, "breed" = $2, "age" = $3, "updated_at" = $4 WHERE "cats"."id" = $5[0m  [["name", "Bobby"], ["breed", "www"], ["age", 9], ["updated_at", "2020-11-24 18:35:17.449787"], ["id", 2]]
+  ↳ app/controllers/cats_controller.rb:24:in `update'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:24:in `update'
+Completed 200 OK in 94ms (Views: 1.1ms | ActiveRecord: 64.0ms | Allocations: 6280)
+
+
+Started GET "/colonies" for 127.0.0.1 at 2020-11-24 13:35:21 -0500
+Processing by ColoniesController#index as HTML
+  [1m[36mColony Load (7.5ms)[0m  [1m[34mSELECT "colonies".* FROM "colonies"[0m
+  ↳ app/controllers/colonies_controller.rb:6:in `index'
+Completed 200 OK in 369ms (Views: 235.9ms | ActiveRecord: 114.8ms | Allocations: 5228)
+
+
