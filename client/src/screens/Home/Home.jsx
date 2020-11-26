@@ -10,7 +10,7 @@ function Home() {
           <Typography> Home Sweet Home  <FavoriteIcon style={{ color: 'red' }} /> </Typography>
         </div>
         <img
-          style={{ width: '600px', height: '500px', margin: '20px auto'}}
+          style={{ width: '400px', height: '500px', margin: '20px auto'}}
           src="https://iconarchive.com/download/i78374/iconka/meow/cat-purr.ico"
           alt="grey cat"
           />

@@ -1,12 +1,42 @@
 import React, { useState } from 'react'
+import Button from '@material-ui/core/Button'
+import styled from 'styled-components'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography'
+import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles({
+  card: {
+    width: '200px',
+    margin: '20px auto'
+  },
+  title: {
+    fontSize: '30px',
+    fontWeight: 'bold'
+  }
+});
+
+
+const Form = styled.form`
+display: flex;
+flex-direction: column;
+
+button{
+  margin-top: 20px;
+}
+`
 
 export default function CatCreate(props) {
+  const classes = useStyles();
+
   const [formData, setFormData] = useState({
     name: "",
-    img_url: "",
+    age: "",
     breed: ""
   });
-  const { name, img_url, breed } = formData;
+  const { name, age, breed } = formData;
   const { createCat } = props;
 
   const handleChange = (e) => {
@@ -18,38 +48,40 @@ export default function CatCreate(props) {
   }
 
   return (
-      <div className="form-container">
-        <form onSubmit={(e) => {
+    <Card className={classes.card}>
+        <CardContent>
+      <Form onSubmit={(e) => {
           e.preventDefault()
           createCat(formData);
         }}>
-          <h3>Create a Cat</h3>
-          <label>Name:
-            <input
+          <Typography className={classes.title}>Create a Cat</Typography>
+          <TextField
+            required
+            label="Name"
               type="text"
               name="name"
               value={name}
               onChange={handleChange}
             />
-          </label>
-          <label>Image Url:
-            <input
-              type="text"
-              name="img_url"
-              value={img_url}
+            <TextField
+              required
+            label="Age"
+              type="number"
+              name="age"
+              value={age}
               onChange={handleChange}
             />
-          </label>
-          <label>Breed:
-            <input
+          <TextField
+            required
+              label="breed"
               type="text"
               name="breed"
               value={breed}
               onChange={handleChange}
             />
-          </label>
-          <button>Submit</button>
-        </form>
-      </div>
+          <Button type="submit" variant="contained" color="primary">Submit</Button>
+        </Form>
+        </CardContent>
+      </Card>
   )
 }

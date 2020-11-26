@@ -5,7 +5,6 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Switch from "@material-ui/core/Switch";
 import PetsIcon from "@material-ui/icons/Pets";
-import { StickyContainer, Sticky } from 'react-sticky';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,20 +17,13 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "20px",
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(1),
   },
   title: {
     flexGrow: 1,
   },
   timeClass: {
-    display: "flex",
-    position: "absolute",
-    marginLeft: "45%",
-    textAlign: "center",
-    alignItems: "center",
-    justifyContent: "center",
-    alignContent: "center",
-    whiteSpace: "nowrap",
+    marginRight: '20px',
   },
 }));
 
@@ -50,17 +42,13 @@ export default function Header({darkMode, setDarkMode}) {
         <Toolbar>
           <PetsIcon className={classes.menuButton} />
           <Typography variant="h6" className={classes.title}>
-            Cats and Colonies
+              Cats and Colonies
           </Typography>
-          <div className={classes.timeClass}>
-            <Typography>Today: {timeWithoutSeconds}</Typography>
-          </div>
-          <div>
+            <Typography className={classes.timeClass}>{timeWithoutSeconds}</Typography>
             <Switch
               checked={darkMode}
               onChange={() => setDarkMode(!darkMode)}
             />
-          </div>
         </Toolbar>
         </AppBar>
     </div>
