@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import Button from '@material-ui/core/Button'
+import Card from '@material-ui/core/Card'
 
 export default function CatDetail(props) {
   const [colony, setColony] = useState({});
@@ -27,16 +29,16 @@ export default function CatDetail(props) {
   return (
     <div className="cat-details">
       {colony && (
-        <div className="card">
-          name: <h3>{colony.name}</h3>
+        <Card className="card">
+         colony name: <h3>{colony.name}</h3>
           borough: <h3>{colony.borough}</h3>
           CATS:
           {colony.cats && colony.cats.length ? KITTY : <p>NO KITTY FOR U</p> }
           <Link to={`/colonies/${colony.id}/edit`}>
-            <button>Update</button>
+            <Button style={{margin: '20px'}} variant="contained" color="primary">Update</Button>
           </Link>
-          <button onClick={() => removeColony(colony.id)}>Delete</button>
-        </div>
+          <Button variant="contained" color="secondary" onClick={() => removeColony(colony.id)}>Delete</Button>
+        </Card>
       )}
     </div>
   );

@@ -10,9 +10,9 @@ import { Link } from 'react-router-dom'
 const useStyles = makeStyles({
   root: {
     width: '100vw',
-    position: 'absolute',
-    left: '0',
-    bottom: '0',
+    position: 'sticky',
+    bottom: 0,
+    marginTop: '20px'
   },
 });
 
