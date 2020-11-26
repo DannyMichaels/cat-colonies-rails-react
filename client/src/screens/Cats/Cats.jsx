@@ -2,7 +2,13 @@ import React from 'react';
 import Card from '../../components/Card/Card';
 import { Link } from 'react-router-dom';
 import './Cats.css'
-export default function Cats({allCats}) {
+import CircularProgress from "@material-ui/core/CircularProgress";
+
+export default function Cats({allCats, loaded}) {
+
+  if (!loaded) {
+    return <> <h1>Loading</h1><CircularProgress /> </>
+  }
 
   return (
       <div className="card-list">

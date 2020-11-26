@@ -8,6 +8,8 @@ import CatEdit from '../../screens/CatEdit/CatEdit';
 
 export default function CatsContainer() {
   const [allCats, setAllCats] = useState([]);
+  const [loaded, setLoaded] = useState(false)
+
   const history = useHistory();
 
   useEffect(() => {
@@ -17,6 +19,7 @@ export default function CatsContainer() {
   const fetchCats = async () => {
     const cats = await getAllCats();
     setAllCats(cats);
+    setLoaded(true)
   }
 
   const createCat = async (catData) => {
@@ -66,6 +69,7 @@ export default function CatsContainer() {
         <Route path='/cats'>
           <Cats
             allCats={allCats}
+            loaded={loaded}
           />
         </Route>
       </Switch>

@@ -9,6 +9,8 @@ import ColonyEdit from '../../screens/ColonyEdit/ColonyEdit';
   
 export default function ColoniesContainer() {
   const [allColonies, setAllColonies] = useState([]);
+  const [loaded, setLoaded] = useState(false)
+
   const history = useHistory();
 
   useEffect(() => {
@@ -18,6 +20,7 @@ export default function ColoniesContainer() {
   const fetchColonies = async () => {
     const colonies = await getAllColonies();
     setAllColonies(colonies);
+    setLoaded(true);
   }
 
   const oneColony = async () => {
@@ -72,6 +75,7 @@ export default function ColoniesContainer() {
         </Route>
         <Route path='/colonies'>
           <Colonies
+            loaded={loaded}
             allColonies={allColonies}
           />
         </Route>

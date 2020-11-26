@@ -1,9 +1,30 @@
-export default function Card({ name, age, breed }) {
+import Card from "@material-ui/core/Card";
+import { makeStyles } from "@material-ui/core/styles";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
+
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275,
+  },
+  title: {
+    fontSize: 20,
+  },
+  pos: {
+    marginBottom: 12,
+  },
+});
+
+export default function Cards({ name, age, breed }) {
+  const classes = useStyles();
+
   return (
-    <div className="card">
-      <h3>{name}</h3>
-      <h2>{age}</h2>
-      <p>{breed}</p>
-    </div>
+    <Card>
+      <CardContent>
+        <Typography className={classes.title}>{name}</Typography>
+        <h2>{age}</h2>
+        <p>{breed}</p>
+      </CardContent>
+    </Card>
   );
 }
