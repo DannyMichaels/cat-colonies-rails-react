@@ -3,9 +3,10 @@ import { Route, Switch, useHistory } from 'react-router-dom';
 import { getAllColonies, deleteColony, postColony, putColony, getOneColony} from '../../services/colonies';
 import Colonies from '../../screens/Colonies/Colonies';
 import ColonyDetail from '../../screens/ColonyDetail/ColonyDetail';
-// import ColonyCreate from '../../screens/ColonyCreate/ColonyCreate';
-// import ColonyEdit from '../../screens/ColonyEdit/ColonyEdit';
+import ColonyCreate from '../../screens/ColonyCreate/ColonyCreate';
+import ColonyEdit from '../../screens/ColonyEdit/ColonyEdit';
 
+  
 export default function ColoniesContainer() {
   const [allColonies, setAllColonies] = useState([]);
   const history = useHistory();
@@ -32,6 +33,7 @@ export default function ColoniesContainer() {
     ]));
     history.push('/colonies');
   }
+  
   const updateColony = async (id, colonyData) => {
     const updatedColony = await putColony(id, colonyData);
     setAllColonies(prevState => prevState.map(colony => {
@@ -50,7 +52,7 @@ export default function ColoniesContainer() {
   return (
     <>
       <Switch>
-        {/* <Route path='/colonies/new'>
+        <Route path='/colonies/new'>
           <ColonyCreate
             createColony={createColony}
           />
@@ -60,10 +62,10 @@ export default function ColoniesContainer() {
             updateColony={updateColony}
             allColonies={allColonies}
           />
-        </Route> */}
+        </Route>
         <Route path='/Colonies/:id'>
           <ColonyDetail
-            oneColony={oneColony}
+            getOneColony={getOneColony}
             allColonies={allColonies}
             removeColony={removeColony}
           />

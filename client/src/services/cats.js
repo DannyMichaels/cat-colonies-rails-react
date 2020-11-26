@@ -2,6 +2,7 @@ import api from './apiConfig'
 
 export const getAllCats = async () => {
   const resp = await api.get('/cats');
+  console.log(resp.data)
   return resp.data;
 }
 

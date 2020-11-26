@@ -3,7 +3,7 @@ class ColoniesController < ApplicationController
   
   def index
       @colonies = Colony.all
-      render json: @colonies
+      render json: @colonies, include: :cats, status: :ok
   end
   
     def show
@@ -19,7 +19,16 @@ class ColoniesController < ApplicationController
       end
     end
   
-      # DELETE /cats/1
+    def create
+      @colony =  Colony.new(colony_params)
+      if @colony.save
+      render json: @colony, status: :created
+      else
+        render json: @colony.errors, status: :unprocessable_entity
+      end
+    end
+
+      # DELETE /colonies/1
       def destroy
         @colony.destroy
       end

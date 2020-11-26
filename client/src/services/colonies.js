@@ -2,14 +2,13 @@ import api from './apiConfig'
 
 export const getAllColonies = async () => {
   const resp = await api.get('/colonies');
-  console.log(resp.data)
+  console.log("HEYOOO", resp.data)
   return resp.data;
 }
 
 export const getOneColony = async (id) => {
   const resp = await api.get(`/colonies/${id}`);
   console.log("colony by id", resp.data)
-
   return resp.data;
 }
 

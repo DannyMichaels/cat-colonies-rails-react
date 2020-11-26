@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
-import { getAllCats, deleteCat, postCat, putCat } from '../../services/cats';
+import { getAllCats, deleteCat, postCat, putCat, getOneCat } from '../../services/cats';
 import Cats from '../../screens/Cats/Cats';
 import CatDetail from '../../screens/CatDetail/CatDetail';
 import CatCreate from '../../screens/CatCreate/CatCreate';
@@ -58,6 +58,7 @@ export default function CatsContainer() {
         </Route>
         <Route path='/cats/:id'>
           <CatDetail
+          getOneCat={getOneCat}
             allCats={allCats}
             removeCat={removeCat}
           />

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom'
-
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 
 export default function CatDetail(props) {
   const [cat, setCat] = useState(null);
@@ -10,22 +9,26 @@ export default function CatDetail(props) {
   useEffect(() => {
     if (allCats.length) {
       const oneCat = allCats.find((cat) => cat.id === Number(id));
-      setCat(oneCat)
+      setCat(oneCat);
     }
-  }, [allCats, id])
-  
+  }, [allCats, id]);
+
+  const COLONIES = cat?.colonies?.map((colony) => <p>{colony.name}</p>);
+
   return (
-      <div className="cat-details">
-        {
-          cat &&
-          <div className="card">
-            name: <h3>{cat.name}</h3>
+    <div className="cat-details">
+      {cat && (
+        <div className="card">
+          name: <h3>{cat.name}</h3>
           age: <h3>{cat.age}</h3>
-            breed: <p>{cat.breed}</p>
-            <Link to={`/cats/${cat.id}/edit`}><button>Update</button></Link>
-            <button onClick={() => removeCat(cat.id)}>Release</button>
-          </div>
-        }
-      </div>
-  )
+          breed: <p>{cat.breed}</p>
+          Colonies: {cat.colonies && cat.colonies.length ? COLONIES : <p>No Colonies</p>}
+          <Link to={`/cats/${cat.id}/edit`}>
+            <button>Update</button>
+          </Link>
+          <button onClick={() => removeCat(cat.id)}>Release</button>
+        </div>
+      )}
+    </div>
+  );
 }
